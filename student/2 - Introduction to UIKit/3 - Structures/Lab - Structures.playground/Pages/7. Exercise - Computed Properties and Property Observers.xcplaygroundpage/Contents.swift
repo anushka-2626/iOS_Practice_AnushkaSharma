@@ -6,7 +6,9 @@
 struct Rectangle {
     var width: Int
     var height: Int
-    
+    func area() -> Int {
+        return width * height
+    }
 }
 
 
@@ -30,7 +32,11 @@ struct Height {
         self.heightInInches = heightInCentimeters/2.54
     }
 }
+var height = Height(heightInInches: 65)
+print(height.heightInCentimeters)
 
+height.heightInInches = 72
+print(height.heightInCentimeters) 
 
 
 /*:

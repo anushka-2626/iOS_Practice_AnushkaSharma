@@ -11,10 +11,13 @@ struct RunningWorkout {
     var distance: Double
     var time: Double
     var elevation: Double
-    
+    func averageMileTime() -> Double {
+        return time / (distance / 1600)
+    }
 }
 
-
+var workout = RunningWorkout(distance: 4000, time: 180, elevation: 100)
+print("Average mile time: \(workout.averageMileTime()) seconds")
 /*:
  In other app exercises, you've provided encouraging messages to the user based on how many steps they've completed. A great place to check whether or not you should display something to the user is in a property observer.
  
@@ -27,9 +30,15 @@ struct Steps {
     mutating func takeStep() {
         steps += 1
     }
+    func willSet(_ newValue: Int) {
+        if newValue == goal {
+            print("Congratulations! You reached your goal!")
+        }
+    }
 }
 
-
+var progress = Steps(steps: 9999, goal: 10000)
+progress.takeStep()
 /*:
 [Previous](@previous)  |  page 8 of 10  |  [Next: Exercise - Type Properties and Methods](@next)
  */

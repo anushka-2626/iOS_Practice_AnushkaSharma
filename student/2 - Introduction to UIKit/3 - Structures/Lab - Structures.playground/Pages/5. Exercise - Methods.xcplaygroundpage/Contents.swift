@@ -8,7 +8,9 @@ struct Book {
     var author: String
     var pages: Int
     var price: Double
-    
+    func description() -> String {
+        return "\(title) by \(author), \(pages) pages, $\(price)"
+    }
 }
 
 
@@ -17,9 +19,14 @@ struct Post {
     var message: String
     var likes: Int
     var numberOfComments: Int
-
+    mutating func like() {
+        self.likes += 1
+    }
 }
-
+var post = Post(message: "Hello, world!", likes: 0, numberOfComments: 0)
+post.like()
+print("Likes before: \(post.likes)")
+print("Likes after: \(post.likes)")
 
 /*:
 [Previous](@previous)  |  page 5 of 10  |  [Next: App Exercise - Workout Functions](@next)

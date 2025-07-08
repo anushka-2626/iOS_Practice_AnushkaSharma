@@ -9,7 +9,11 @@ struct RunningWorkout {
     var distance: Double
     var time: Double
     var elevation: Double
-    
+    func postWorkoutStats() {
+        print("Distance run: \(distance) km")
+        print("Time taken: \(time) minutes")
+        print("Elevation gain: \(elevation) metres")
+    }
 }
 
 
@@ -17,9 +21,14 @@ struct RunningWorkout {
 struct Steps {
     var steps: Int
     var goal: Int
-    
+    mutating func takeStep() {
+        steps += 1
+    }
 }
-
+var dailySteps = Steps(steps: 0, goal: 10000)
+print("Before taking a step: \(dailySteps.steps)")
+dailySteps.takeStep()
+print("After taking a step: \(dailySteps.steps)")
 
 /*:
 [Previous](@previous)  |  page 6 of 10  |  [Next: Exercise - Computed Properties and Property Observers](@next)
