@@ -216,11 +216,12 @@ chitkara.printTemp()*/
 
 //---------8 july---------
 
-class Vehicle{
+/*class Vehicle{
     var currentSpeed = 0.0
     var description : String {
         "travelling at \(currentSpeed)"
     }
+    
     func makeNoise(){
         print("ting ting")
     }
@@ -242,6 +243,9 @@ print(bicycle.hasbasket)
 
 class Tandem : Bicycle {
     var noOfPeople = 0
+    override var description: String {
+        super.description + " but slow"
+    }
     override func makeNoise() {
         print("tinggg")
     }
@@ -252,4 +256,90 @@ tandem.hasbasket = true
 tandem.noOfPeople=2
 print(tandem.noOfPeople)
 print(tandem.makeNoise())
+print(tandem.description)
+*/
+
+//---------9 july-------
+//collections
+
+var names = ["anu","diksha","gunita"]
+
+print(names.contains("anu"))
+print(names.count)
+print(names[0])
+
+names.append("vansh")
+print(names)
+
+names.insert("minion",at: 1)
+print(names)
+
+names.remove(at: 4)
+print(names)
+
+names.removeLast()
+print(names)
+
+//names.removeAll()
+//print(names)
+
+let arr1=[1,2,3]
+let arr2=[4,5,6]
+let arr3=[arr1,arr2]
+print(arr3)
+
+var scores = ["anu": 5,"abhi": 10]
+print(scores["anu"])
+let oldValue = scores.updateValue(10, forKey: "anu")
+print(scores)
+print(oldValue)
+scores["anu"] = nil
+scores["momo"] = 15
+print(scores)
+scores.removeValue(forKey: "anu")
+print(scores)
+
+let namess = Array(scores.keys)
+let points = Array(scores.values)
+print(namess)
+print(points)
+
+
+//loops
+
+for index in 1...5 {
+    print(index)
+}
+
+for index in 1..<5 {
+    print(index)
+}
+
+for name in names {
+    print(name)
+}
+
+for letter in "ABCDE" {
+    print(letter)
+}
+
+for (index,letter) in "ABCDE".enumerated() {
+    print("\(letter) at \(index)")
+}
+
+for (name,score) in scores {
+    print("\(name) got \(score)")
+}
+
+var lives = 3
+while lives > 0 {
+    print(lives)
+    lives -= 1
+}
+
+var count = 3
+repeat {
+    print(count)
+    count -= 1
+} while count > 1
 
