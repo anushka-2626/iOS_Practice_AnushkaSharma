@@ -261,7 +261,7 @@ print(tandem.description)
 
 //---------9 july-------
 //collections
-
+/*
 var names = ["anu","diksha","gunita"]
 
 print(names.contains("anu"))
@@ -342,4 +342,61 @@ repeat {
     print(count)
     count -= 1
 } while count > 1
+*/
+
+
+//----------10 july-------
+//optionals
+/*
+struct Book{
+    var name: String
+    var year: Int?
+}
+
+let first = Book(name:"Hi",year:2005)
+let second = Book(name:"Hello",year:2006)
+
+var books: [Book]? = [first,second]
+books = nil
+
+var bookss: [Book?] = [first,second]
+books = [nil]
+
+var third = Book(name:"third",year:nil)
+
+struct Toddler{
+    var name: String
+    var age: Int
+    
+    init?(name: String, age: Int){
+        if(age < 12 || age > 36){
+            retrun nil
+        }else{
+            self.name = name
+            self.age = age
+        }
+    }
+}
+
+
+struct Person{
+    var age: Int
+    var residence: Residence?
+}
+
+struct Residence{
+    var address: Address?
+}
+
+struct Address{
+    var bno: String?
+    var street: String?
+    var ano: String?
+}
+
+let person = Person(age: 35, residence: Residence(address: Address(bno: "11a",street: "str10",ano: "6")))
+
+*/
+
+//-------11 july--------
 
