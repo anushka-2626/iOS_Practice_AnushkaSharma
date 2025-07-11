@@ -400,3 +400,34 @@ let person = Person(age: 35, residence: Residence(address: Address(bno: "11a",st
 
 //-------11 july--------
 
+class Mentor {
+    var specialization: String? = nil
+}
+
+class Student {
+    var name: String
+    var age: Int
+    var mentor: Mentor?
+    
+    init?(name: String, age: Int, mentor: Mentor){
+        if(age < 10 || name.isEmpty){
+                return nil
+            }else{
+                self.name = name
+                self.age = age
+                self.mentor = mentor
+            }
+    }
+    
+    func fetch() {
+        print(mentor?.specialization ?? "n/a")
+    }
+}
+
+
+let m1 = Mentor()
+m1.specialization = "cs"
+let s1 = Student(name: "Anu", age: 15, mentor: m1)
+s1!.fetch()
+
+
