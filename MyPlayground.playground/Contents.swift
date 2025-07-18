@@ -400,7 +400,7 @@ let person = Person(age: 35, residence: Residence(address: Address(bno: "11a",st
 
 //-------11 july--------
 
-class Mentor {
+/*class Mentor {
     var specialization: String? = nil
 }
 
@@ -430,4 +430,29 @@ m1.specialization = "cs"
 let s1 = Student(name: "Anu", age: 15, mentor: m1)
 s1!.fetch()
 
+*/
 
+//type casting
+
+class Animal{
+    var name: String
+    
+    init(name:String){
+        self.name = name
+    }
+}
+
+class Dog: Animal{
+    func bark(){
+        print("woof")
+    }
+}
+class Cat: Animal{
+    func meow(){
+        print("meow")
+    }
+}
+
+func getCLientPEt -> Animal{
+    return Dog(name: "jimmy")
+}
