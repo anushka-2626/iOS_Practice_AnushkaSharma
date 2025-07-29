@@ -85,10 +85,10 @@
             </objects>
             <point key="canvasLocation" x="88" y="8"/>
         </scene>
-        <!--Questions View Controller-->
+        <!--Question View Controller-->
         <scene sceneID="Xe3-0I-pcb">
             <objects>
-                <viewController id="Ih5-61-Bdf" customClass="QuestionsViewController" sceneMemberID="viewController">
+                <viewController id="Ih5-61-Bdf" customClass="QuestionViewController" customModule="Personality_Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="axu-vG-ZIr">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -246,6 +246,21 @@
                     </view>
                     <navigationItem key="navigationItem" id="yM7-cy-1iY"/>
                     <connections>
+                        <outlet property="multiLabel1" destination="Smd-xj-D3i" id="fCb-H9-ELT"/>
+                        <outlet property="multiLabel2" destination="kGC-S2-BJT" id="Vle-C1-EtV"/>
+                        <outlet property="multiLabel3" destination="4my-yd-CIq" id="sXL-t8-ahF"/>
+                        <outlet property="multiLabel4" destination="mBW-Vz-IRg" id="phb-aO-2vh"/>
+                        <outlet property="multipleStackView" destination="bs5-Kx-bgU" id="fg4-ys-dfE"/>
+                        <outlet property="questionLabel" destination="JlB-2I-EKJ" id="rbu-T7-FvU"/>
+                        <outlet property="questionProgressView" destination="iwV-Dk-tan" id="zi5-57-uuM"/>
+                        <outlet property="rangedLabel1" destination="SpH-vZ-or3" id="3oJ-5f-iQx"/>
+                        <outlet property="rangedLabel2" destination="IlL-Z2-d2T" id="B9o-cx-Nbh"/>
+                        <outlet property="rangedStackView" destination="c2j-R9-i34" id="WqP-jf-QpB"/>
+                        <outlet property="singleButton1" destination="WCr-In-2tP" id="qRh-Ii-f2f"/>
+                        <outlet property="singleButton2" destination="KgM-jT-jGb" id="ATK-Ff-ble"/>
+                        <outlet property="singleButton3" destination="hQB-ce-rCS" id="uXb-H7-FXr"/>
+                        <outlet property="singleButton4" destination="U7G-gH-AyZ" id="l1E-qe-Pld"/>
+                        <outlet property="singleStackView" destination="w6e-2i-gKP" id="eZ3-p2-bEQ"/>
                         <segue destination="bdU-Zb-OVd" kind="show" identifier="Results" id="rCg-0O-q0g"/>
                     </connections>
                 </viewController>
